@@ -190,6 +190,7 @@ public class UnitCalculadora {
         }while(opc<0 || opc>8);
         return opc;
     }
+    
     static public double ingresarValor(){
         double v;
         v = teclado.nextDouble();
