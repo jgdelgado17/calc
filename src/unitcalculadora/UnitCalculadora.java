@@ -118,7 +118,7 @@ public class UnitCalculadora {
                     a = ingresarValor('a');
                     b = ingresarValor('b');
                     while(b==0){
-                        System.out.println("No se puede dividir por cero");
+                        System.out.println("ADVERTENCIA: No se puede dividir por cero");
 //                        Thread.sleep(2000);
 //                        main(args);
                         b = ingresarValor('b');
