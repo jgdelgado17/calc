@@ -187,7 +187,7 @@ public class UnitCalculadora {
             System.out.print("Elija una operación ... ");
             opc = teclado.nextInt();
             System.out.println("");
-        }while(opc<0 || opc>10);
+        }while(opc<0 || opc>8);
         return opc;
     }
     static public double ingresarValor(){
