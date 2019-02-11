@@ -40,6 +40,16 @@ public class UnitCalculadora {
         return ans;
     }
     
+    public static double add(double v){
+        ans += v;
+        return ans;
+    }
+    
+    public static double sub(double v){
+        ans -= v;
+        return ans;
+    }
+    
     public static double operarAns(String o, double v){
         switch (o){
             case "+":{

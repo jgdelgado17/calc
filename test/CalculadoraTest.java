@@ -105,9 +105,9 @@ public class CalculadoraTest {
         System.out.println("add()");
         calc.suma(4,5);
         
-//        double resultado=calc.add(2);
-//        double esperado=11;
-//        assertEquals(esperado,resultado,0);
+        double resultado=calc.add(2);
+        double esperado=11;
+        assertEquals(esperado,resultado,0);
     }
     
     @Test
@@ -115,9 +115,9 @@ public class CalculadoraTest {
         System.out.println("sub()");
         calc.suma(4,5);
         
-//        double resultado=calc.sub(2);
-//        double esperado=7;
-//        assertEquals(esperado,resultado,0);
+        double resultado=calc.sub(2);
+        double esperado=7;
+        assertEquals(esperado,resultado,0);
     }
 
     
