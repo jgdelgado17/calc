@@ -79,7 +79,6 @@ public class UnitCalculadora {
             
         }
     }
-
     
     public static void main(String[] args) {
         double a, b, res;
