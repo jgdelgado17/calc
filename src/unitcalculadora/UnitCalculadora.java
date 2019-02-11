@@ -117,17 +117,12 @@ public class UnitCalculadora {
                     System.out.println("Eligio división");
                     a = ingresarValor('a');
                     b = ingresarValor('b');
-                    if(b==0){
+                    while(b==0){
                         System.out.println("No se puede dividir por cero");
-                        Thread.sleep(2000);
-                        main(args);
-                    }
-//                    while(b==0){
+//                        Thread.sleep(2000);
 //                        main(args);
-//                        System.out.println("No se puede dividir por cero");
-//                        System.out.print("Ingrese b = ");
-//                        b = ingresarValor('b');
-//                    }
+                        b = ingresarValor('b');
+                    }
                     res = division(a, b);
                     System.out.println(a+" / "+b+" = "+res);
                     break;
