@@ -174,7 +174,7 @@ public class UnitCalculadora {
     static public int menu (){
         int opc;
         do{
-            System.out.println("\n***** MENÚss *****");
+            System.out.println("\n***** MENÚ *****");
             System.out.println("[0] Salir");
             System.out.println("[1] Suma");
             System.out.println("[2] Resta");
