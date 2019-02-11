@@ -80,7 +80,7 @@ public class UnitCalculadora {
         }
     }
     
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         double a, b, res;
         int op = 0;
         do{
@@ -91,55 +91,51 @@ public class UnitCalculadora {
                 }
                 case 1:{
                     System.out.println("Eligio suma");
-                    System.out.print("Ingrese a = ");
-                    a = ingresarValor();
-                    System.out.print("Ingrese b = ");
-                    b = ingresarValor();
+                    a = ingresarValor('a');
+                    b = ingresarValor('b');
                     res = suma(a, b);
                     System.out.println(a+" + "+b+" = "+res);
                     break;
                 }
                 case 2:{
                     System.out.println("Eligio resta");
-                    System.out.print("Ingrese a = ");
-                    a = ingresarValor();
-                    System.out.print("Ingrese b = ");
-                    b = ingresarValor();
+                    a = ingresarValor('a');
+                    b = ingresarValor('b');
                     res = resta(a, b);
                     System.out.println(a+" - "+b+" = "+res);
                     break;
                 }
                 case 3:{
                     System.out.println("Eligio multiplicación");
-                    System.out.print("Ingrese a = ");
-                    a = ingresarValor();
-                    System.out.print("Ingrese b = ");
-                    b = ingresarValor();
+                    a = ingresarValor('a');
+                    b = ingresarValor('b');
                     res = multiplicacion(a, b);
                     System.out.println(a+" X "+b+" = "+res);
                     break;
                 }
                 case 4:{
                     System.out.println("Eligio división");
-                    System.out.print("Ingrese a = ");
-                    a = ingresarValor();
-                    System.out.print("Ingrese b = ");
-                    b = ingresarValor();
-                    while(b==0){
+                    a = ingresarValor('a');
+                    b = ingresarValor('b');
+                    if(b==0){
                         System.out.println("No se puede dividir por cero");
-                        System.out.print("Ingrese b = ");
-                        b = ingresarValor();
+                        Thread.sleep(2000);
+                        main(args);
                     }
+//                    while(b==0){
+//                        main(args);
+//                        System.out.println("No se puede dividir por cero");
+//                        System.out.print("Ingrese b = ");
+//                        b = ingresarValor('b');
+//                    }
                     res = division(a, b);
                     System.out.println(a+" / "+b+" = "+res);
                     break;
                 }
                 case 5:{
                     System.out.println("Eligio potenciación");
-                    System.out.print("Ingrese a = ");
-                    a = ingresarValor();
-                    System.out.print("Ingrese b = ");
-                    b = ingresarValor();
+                    a = ingresarValor('a');
+                    b = ingresarValor('b');
                     res = potenciacion(a, b);
                     System.out.println(a+" ^ "+b+" = "+res);
                     break;
@@ -154,8 +150,7 @@ public class UnitCalculadora {
                     System.out.println("Eligio operar Ans");
                     System.out.print("Ingrese + - * / ^ segun desee ==> ");
                     o = teclado.next();
-                    System.out.print("Ingrese valor = ");
-                    a = ingresarValor();
+                    a = ingresarValor(' ');
                     res = operarAns(o, a);
                     System.out.println("Ans "+o+" "+a+" = "+ans());
                     break;
@@ -166,7 +161,7 @@ public class UnitCalculadora {
                     break;
                 }
             }
-            System.out.print("\nPresione 1 para volver al MENÚ u otro número para salir ... ");
+            System.out.print("\nVolver al MENÚ [1] \t salir [0] ... ");
             op = teclado.nextInt();
         }while (op == 1);
     }
@@ -191,8 +186,9 @@ public class UnitCalculadora {
         return opc;
     }
     
-    static public double ingresarValor(){
+    static public double ingresarValor(char s){
         double v;
+        System.out.print("Ingrese el valor "+s+" = ");
         v = teclado.nextDouble();
         return v;
     }
